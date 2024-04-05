@@ -4,6 +4,8 @@ FROM python:3.11-slim
 WORKDIR /app
 # Copy the requirements file to the working directory
 COPY requirements.txt .
+# Copy the env into container
+COPY .env .
 # Install the Python dependencies
 RUN pip3 install --no-cache-dir -r requirements.txt
 COPY src ./src
