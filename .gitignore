@@ -39,4 +39,5 @@ dist-ssr
 *.sw?
 .history/
 run.sh
+__pycache__/
 
