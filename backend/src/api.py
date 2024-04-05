@@ -20,10 +20,6 @@ app = Flask(__name__)
 load_dotenv(find_dotenv())
 key = os.environ.get("API_KEY")
 
-@app.route('/ping')
-def pong():
-    return "pong";
-
 @app.route('/query', methods=['POST', "OPTIONS"])
 def get_tasks():
     if request.method == "OPTIONS":
